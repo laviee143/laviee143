@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.kawa {
+  color: #730002;
+  font-family: "Carter One", system-ui;
+}
+
+.kawai {
+  color: #730002;
+  font-family: "Reem Kufi Ink", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom right, #dd919e);
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background-color: rgb(246, 206, 212);
+  padding: 30px;
+  border-radius: 40px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-image: url("assets/lightbunny.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.another-container {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 30px 70px;
+  margin: 50px auto;
+  border-radius: 50px;
+  background-size: cover;
+  opacity: 80%;
+}
+
+h1 {
+  color: #d6336c;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.input {
+  position: relative;
+  background: rgb(246, 206, 212);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input input {
+  border: none;
+  background: transparent;
+  font-family: "Reem Kufi Ink", sans-serif;
+  font-size: 1em;
+  width: 100%;
+  color: #858282;
+  outline: none;
+  padding-right: 45px;
+}
+
+.icon-add {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(245, 240, 240);
+  color: rgb(243, 182, 191);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+}
+
+.task-list {
+  text-align: center;
+}
+
+.task-item {
+  background: rgb(246, 206, 212);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-item input {
+  border: none;
+  background: transparent;
+  font-family: "Reem Kufi Ink", sans-serif;
+  font-size: 1em;
+  width: 70%;
+  color: #858282;
+  outline: none;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.icon-edit::after {
+  content: '✎';
+  color: white;
+}
+
+.icon-delete::after {
+  content: '✕';
+  color: white;
+}
+
+h2 {
+  font-size: 0.9em;
+  color: #858282;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .another-container {
+    padding: 30px 20px;
+    margin: 40px auto;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  .input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input input {
+    width: 100%;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .icons {
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+  .icon-add {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .input input {
+    font-size: 0.9em;
+  }
+
+  h2 {
+    font-size: 0.8em;
+  }
+}
